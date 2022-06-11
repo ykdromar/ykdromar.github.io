@@ -16,7 +16,10 @@
     <title>JEE</title>
     <link rel="icon" href="y2.png" type="image/x-icon" />
   </head>
-  <body>
+  <body onload="loadfun()">
+    <div class="loader-wrapper" id="loader">
+      <div class="loader">
+        <div class="loader loader-inner"></div></div></div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         
@@ -158,6 +161,12 @@
         </ul>
       </footer>
     </div>
+    <script>
+      var load=document.getElementById("loader");
+      function loadfun(){
+        load.style.display='none';
+      }
+    </script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

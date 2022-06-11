@@ -17,8 +17,11 @@
     <title>Home | YK Dromar </title>
     <link rel="icon" href="y2.png" type="image/x-icon" />
   </head>
-  <body>
+  <body onload="loadfun()">
     <!-- Optional JavaScript; choose one of the two! -->
+    <div class="loader-wrapper" id="loader">
+      <div class="loader">
+        <div class="loader loader-inner"></div></div></div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         
@@ -407,7 +410,14 @@
         </ul>
       </footer>
     </div>
+   
     <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script>
+      var load=document.getElementById("loader");
+      function loadfun(){
+        load.style.display='none';
+      }
+    </script>
     
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
