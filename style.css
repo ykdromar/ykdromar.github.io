@@ -41,7 +41,7 @@ nav {
 }
 @media screen and (max-width: 700px) {
   .horizontal-list a {
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
   }
 }
 .nav a {
@@ -78,7 +78,7 @@ nav {
     top: 13vh !important;
   }
   #my-name {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
 }
 
