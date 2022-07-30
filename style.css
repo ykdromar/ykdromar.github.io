@@ -70,7 +70,7 @@ nav {
 }
 @media screen and (max-width: 700px) {
   #name-social {
-    top: 1vh !important;
+    top: 0.2vh !important;
   }
 }
 
@@ -290,7 +290,7 @@ section:nth-child(2n) {
 }
 .timeline-box {
   /* border: 1px solid black; */
-  width: 40vh;
+  width: 35vw;
   min-width: 260px;
   min-height: 60px;
   position: relative;
@@ -345,7 +345,7 @@ section:nth-child(2n) {
 }
 @media screen and (max-width: 830px) {
   .vl {
-    left: 90%;
+    left: 100%;
   }
   .timeline-box:nth-child(even) {
     left: 5%;
