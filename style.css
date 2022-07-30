@@ -12,7 +12,7 @@ body {
 }
 @media screen and (max-width: 700px) {
   #page-header {
-    height: 60vh;
+    height: 70vh;
   }
 }
 
@@ -70,7 +70,7 @@ nav {
 }
 @media screen and (max-width: 700px) {
   #name-social {
-    top: 0.2vh !important;
+    top: 7vh !important;
   }
 }
 
@@ -92,7 +92,7 @@ nav {
   box-shadow: 0px 0px 6px 4px rgba(239, 236, 236, 0.5);
 }
 #about-me {
-  margin: 100px;
+  margin: 50px;
   margin-top: 0px;
   margin-bottom: 20px;
   font-size: 14px;
@@ -345,10 +345,10 @@ section:nth-child(2n) {
 }
 @media screen and (max-width: 830px) {
   .vl {
-    left: 100%;
+    left: 2%;
   }
-  .timeline-box:nth-child(even) {
-    left: 5%;
+  .timeline-box {
+    left: 8% !important;
   }
 }
 /* @media screen and (max-width: 600px) {
