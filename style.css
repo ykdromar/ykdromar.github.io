@@ -396,3 +396,7 @@ section:nth-child(2n) {
 
   transform: rotate(180deg);
 }
+/* Certifications */
+#certifications {
+  display: flex;
+}
