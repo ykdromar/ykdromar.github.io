@@ -3,7 +3,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 #page-header {
-  background-image: url(static/page_header.jpg);
+  background-image: url(static/page_header.png);
   height: 65vh;
   background-size: cover;
   background-position: center;
