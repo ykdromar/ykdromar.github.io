@@ -123,7 +123,7 @@
         var data = bigdata.record;
 
         // renderToDoList();
-        c;
+
         showNotification("Message sent Successfully");
         return;
       } catch (e) {
@@ -138,9 +138,6 @@
     window.alert(info);
   }
   function handelClick(event) {
-    if (event.key != "Enter") {
-      return;
-    }
     if (!Cname) {
       showNotification("Name cannot be Empty !");
       return;
@@ -175,10 +172,47 @@
 
     add(contact);
   }
+  function handelClickEnter(event) {
+    if (event.key == "Enter") {
+      if (!Cname) {
+        showNotification("Name cannot be Empty !");
+        return;
+      }
+      if (!Cemail) {
+        showNotification("Email cannot be Empty !");
+        return;
+      }
+      if (!Cmessage) {
+        showNotification("Message cannot be Empty !");
+        return;
+      }
+      const date = new Date();
+
+      let day = date.getDate();
+      let month = date.getMonth() + 1;
+      let year = date.getFullYear();
+      let time = date.toLocaleTimeString();
+      let currDate = `${day}/${month}/${year}| ${time}`;
+      const contact = {
+        id: Date.now().toString(),
+        date: currDate,
+        name: Cname.value,
+        email: Cemail.value,
+        message: Cmessage.value,
+      };
+      // console.log(currDate);
+
+      Cname.value = "";
+      Cemail.value = "";
+      Cmessage.value = "";
+
+      add(contact);
+    }
+  }
 
   function initalizeApp() {
     fetchContacts();
-    Cmessage.addEventListener("keyup", handelClick);
+    Cmessage.addEventListener("keyup", handelClickEnter);
     send.addEventListener("click", handelClick);
   }
   initalizeApp();
