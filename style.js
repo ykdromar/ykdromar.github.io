@@ -138,15 +138,15 @@
     window.alert(info);
   }
   function handelClick(event) {
-    if (!Cname) {
+    if (!Cname.value) {
       showNotification("Name cannot be Empty !");
       return;
     }
-    if (!Cemail) {
+    if (!Cemail.value) {
       showNotification("Email cannot be Empty !");
       return;
     }
-    if (!Cmessage) {
+    if (!Cmessage.value) {
       showNotification("Message cannot be Empty !");
       return;
     }
@@ -174,15 +174,15 @@
   }
   function handelClickEnter(event) {
     if (event.key == "Enter") {
-      if (!Cname) {
+      if (!Cname.value) {
         showNotification("Name cannot be Empty !");
         return;
       }
-      if (!Cemail) {
+      if (!Cemail.value) {
         showNotification("Email cannot be Empty !");
         return;
       }
-      if (!Cmessage) {
+      if (!Cmessage.value) {
         showNotification("Message cannot be Empty !");
         return;
       }
