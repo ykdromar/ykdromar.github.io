@@ -70,3 +70,105 @@
     }
   }
 })();
+
+(function () {
+  var contacts = [];
+
+  var send = document.getElementById("send");
+  var Cname = document.getElementById("Cname");
+  var Cemail = document.getElementById("Cemail");
+  var Cmessage = document.getElementById("Cmessage");
+
+  async function fetchTodos() {
+    try {
+      var response = await fetch(
+        "https://api.jsonbin.io/v3/b/631460a95c146d63ca8de067",
+        {
+          method: "GET", // or 'PUT'
+          headers: {
+            "Content-Type": "application/json",
+            "X-Master-Key":
+              "$2b$10$wUX124CxqnC0M92bPD8gEuYZ11u6FlqJAXckE3K661S7ghLbnTNVy",
+          },
+        }
+      );
+      // console.log(response);
+      var bigdata = await response.json();
+      // console.log(bigdata);
+      var data = bigdata.record;
+      contacts = data;
+      // renderToDoList();
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  async function add(contact) {
+    if (contact) {
+      contacts.push(contact);
+      try {
+        var response = await fetch(
+          "https://api.jsonbin.io/v3/b/631460a95c146d63ca8de067",
+          {
+            method: "PUT", // or 'PUT'
+            headers: {
+              "Content-Type": "application/json",
+              "X-Master-Key":
+                "$2b$10$wUX124CxqnC0M92bPD8gEuYZ11u6FlqJAXckE3K661S7ghLbnTNVy",
+            },
+            body: JSON.stringify(contacts),
+          }
+        );
+        var bigdata = await response.json();
+        var data = bigdata.record;
+
+        // renderToDoList();
+        showNotification("Message sent Successfully");
+        return;
+      } catch (e) {
+        showNotification("Failed to sent Message");
+        console.log(e);
+      }
+    }
+    showNotification("Message cannot be added");
+  }
+
+  function showNotification(info) {
+    window.alert(info);
+  }
+  function handelClick(event) {
+    if (!Cname) {
+      showNotification("Name cannot be Empty !");
+      return;
+    }
+    if (!Cemail) {
+      showNotification("Email cannot be Empty !");
+      return;
+    }
+    if (!Cmessage) {
+      showNotification("Message cannot be Empty !");
+      return;
+    }
+    const contact = {
+      id: Date.now().toString(),
+      name: Cname.value,
+      email: Cemail.value,
+      message: Cmessage.value,
+    };
+    console.log(Cname.value);
+    console.log(Cemail.value);
+    console.log(Cmessage.value);
+
+    Cname.value = "";
+    Cemail.value = "";
+    Cmessage.value = "";
+
+    add(contact);
+  }
+
+  function initalizeApp() {
+    fetchTodos();
+    send.addEventListener("click", handelClick);
+  }
+  initalizeApp();
+})();
