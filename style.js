@@ -79,7 +79,7 @@
   var Cemail = document.getElementById("Cemail");
   var Cmessage = document.getElementById("Cmessage");
 
-  async function fetchTodos() {
+  async function fetchContacts() {
     try {
       var response = await fetch(
         "https://api.jsonbin.io/v3/b/631460a95c146d63ca8de067",
@@ -123,6 +123,7 @@
         var data = bigdata.record;
 
         // renderToDoList();
+        c;
         showNotification("Message sent Successfully");
         return;
       } catch (e) {
@@ -176,7 +177,7 @@
   }
 
   function initalizeApp() {
-    fetchTodos();
+    fetchContacts();
     Cmessage.addEventListener("keyup", handelClick);
     send.addEventListener("click", handelClick);
   }
