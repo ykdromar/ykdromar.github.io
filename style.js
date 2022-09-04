@@ -137,6 +137,9 @@
     window.alert(info);
   }
   function handelClick(event) {
+    if (event.key != "Enter") {
+      return;
+    }
     if (!Cname) {
       showNotification("Name cannot be Empty !");
       return;
@@ -149,15 +152,21 @@
       showNotification("Message cannot be Empty !");
       return;
     }
+    const date = new Date();
+
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+    let time = date.toLocaleTimeString();
+    let currDate = `${day}/${month}/${year}| ${time}`;
     const contact = {
       id: Date.now().toString(),
+      date: currDate,
       name: Cname.value,
       email: Cemail.value,
       message: Cmessage.value,
     };
-    console.log(Cname.value);
-    console.log(Cemail.value);
-    console.log(Cmessage.value);
+    // console.log(currDate);
 
     Cname.value = "";
     Cemail.value = "";
@@ -168,6 +177,7 @@
 
   function initalizeApp() {
     fetchTodos();
+    Cmessage.addEventListener("keyup", handelClick);
     send.addEventListener("click", handelClick);
   }
   initalizeApp();
