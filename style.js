@@ -172,47 +172,9 @@
 
     add(contact);
   }
-  function handelClickEnter(event) {
-    if (event.key == "Enter") {
-      if (!Cname.value) {
-        showNotification("Name cannot be Empty !");
-        return;
-      }
-      if (!Cemail.value) {
-        showNotification("Email cannot be Empty !");
-        return;
-      }
-      if (!Cmessage.value) {
-        showNotification("Message cannot be Empty !");
-        return;
-      }
-      const date = new Date();
-
-      let day = date.getDate();
-      let month = date.getMonth() + 1;
-      let year = date.getFullYear();
-      let time = date.toLocaleTimeString();
-      let currDate = `${day}/${month}/${year}| ${time}`;
-      const contact = {
-        id: Date.now().toString(),
-        date: currDate,
-        name: Cname.value,
-        email: Cemail.value,
-        message: Cmessage.value,
-      };
-      // console.log(currDate);
-
-      Cname.value = "";
-      Cemail.value = "";
-      Cmessage.value = "";
-
-      add(contact);
-    }
-  }
 
   function initalizeApp() {
     fetchContacts();
-    Cmessage.addEventListener("keyup", handelClickEnter);
     send.addEventListener("click", handelClick);
   }
   initalizeApp();
