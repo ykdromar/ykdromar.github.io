@@ -48,12 +48,13 @@ nav {
   }
 }
 .nav a {
-  transition: color 0.5s;
+  /* transition: all 0.2s ease-in-out; */
 }
 
 .nav a:hover {
-  color: rgb(237, 232, 232);
-  text-decoration: underline;
+  /* color: rgb(245, 245, 245); */
+  font-weight: 900;
+  /* text-decoration: underline; */
 }
 
 /* Name and Social Section*/
