@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  margin: 0px;
+}
+
+/*APP CSS CODE*/
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+/*RODS*/
+.rod {
+  width: 15%;
+  height: 20px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: white;
+  position: fixed;
+  left: 44vw;
+}
+/*ROD1*/
+#rod1 {
+  background-color: blue;
+  top: 0px;
+  margin-top: 2px;
+}
+/*ROD2*/
+#rod2 {
+  background-color: blueviolet;
+  bottom: 0px;
+  margin-bottom: 2px;
+}
+/*BALL*/
+#ball {
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  border: 1px solid black;
+  border-radius: 50%;
+  bottom: 24px;
+  background-color: brown;
+  left: 50vw;
+}
