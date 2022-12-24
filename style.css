@@ -177,54 +177,23 @@ section:nth-child(2n) {
   left: 5px;
   color: white;
 }
-#Java-progress {
-  background-color: rgb(234, 156, 53);
-  width: 90%;
+.skill-progress:nth-child(6n + 6) .progress {
+  background-color: rgb(184, 58, 252);
 }
-#python-progress {
-  background-color: rgb(54, 57, 240);
-  width: 40%;
+.skill-progress:nth-child(6n + 1) .progress {
+  background-color: rgb(51, 233, 112);
 }
-#c-progress {
-  background-color: rgb(194, 84, 203);
-  width: 80%;
+.skill-progress:nth-child(6n + 2) .progress {
+  background-color: rgb(244, 184, 45);
 }
-#git-progress {
-  background-color: rgb(88, 39, 156);
-  width: 50%;
+.skill-progress:nth-child(6n + 3) .progress {
+  background-color: rgb(248, 81, 81);
 }
-#flutter-progress {
-  background-color: rgb(204, 5, 21);
-  width: 45%;
+.skill-progress:nth-child(6n + 4) .progress {
+  background-color: rgb(52, 100, 243);
 }
-#dart {
-  background-color: rgb(52, 201, 151);
-  width: 50%;
-}
-
-#html-progress {
-  background-color: rgb(204, 5, 21);
-  width: 85%;
-}
-#css-progress {
-  background-color: rgb(54, 57, 240);
-  width: 70%;
-}
-#javascript {
-  background-color: rgb(194, 84, 203);
-  width: 60%;
-}
-#bootstrap {
-  background-color: rgb(234, 156, 53);
-  width: 70%;
-}
-#nodeJs-progress {
-  background-color: rgb(52, 201, 151);
-  width: 0%;
-}
-#react-progress {
-  background-color: rgb(52, 201, 151);
-  width: 0%;
+.skill-progress:nth-child(6n + 5) .progress {
+  background-color: rgb(243, 52, 128);
 }
 .progress {
   /* border-top-left-radius: 15px;
