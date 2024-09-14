@@ -6,6 +6,8 @@ import Footer from "./footer";
 import Projects from "./projects";
 import Skills from "./skills";
 import "react-toastify/dist/ReactToastify.css";
+import Header from "./header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 const App = () => {
   return (
     <div>
@@ -21,12 +23,15 @@ const App = () => {
         pauseOnHover
         theme="light"
       />
-      <Experiences />
-      <Projects />
-      <Skills />
-      <Educations />
-      <Contact />
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Experiences />
+        <Projects />
+        <Skills />
+        <Educations />
+        <Contact />
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 };

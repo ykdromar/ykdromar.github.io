@@ -11,7 +11,10 @@ const Contact = () => {
     formState: { errors },
   } = useForm();
   return (
-    <section className="flex flex-col items-center justify-center mb-4">
+    <section
+      id="contact"
+      className="flex flex-col items-center justify-center mb-4 p-5"
+    >
       <h1 className="text-3xl font-bold my-4">Get in touch</h1>
       <form
         onSubmit={handleSubmit((data) => {
