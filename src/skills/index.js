@@ -1,6 +1,6 @@
 import React from "react";
 import data from "./data.json";
-import SkillBox from "./component/skillBox";
+import SkillBox from "./component/SkillBox";
 const Skills = () => {
   return (
     <section className="flex flex-col items-center">
