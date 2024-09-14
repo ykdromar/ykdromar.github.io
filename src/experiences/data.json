@@ -1,0 +1,14 @@
+[
+    {
+        "title":"Flutter Web Application Development Intern",
+        "company":"MeghGen Technologies",
+        "time":"May’24-Jul’24",
+        "description":"Analyzed the existing codebase to eliminate redundancies and restructured it to align with project requirements. Implemented the Bloc-Repository Architecture to manage application state and separate logic from the UI. Integrated over 15 APIs, including authentication APIs, to ensure a smooth and seamless app workflow for users. Introduced a centrally managed theme to facilitate seamless switching between light and dark modes, enhancing the overall user experience"
+    },
+    {
+        "title":"Mobile App Development Intern",
+        "company":"Cofinity Technologies Private Limited",
+        "time":"May’23-Jul’23",
+        "description":"Implemented a new UI design that streamlined workflows, improved user experience, and enhanced app usability. Introduced mobile number-based login and bearer token authentication mechanisms to secure API calls. Developed and integrated over 20 APIs into the frontend, ensuring seamless integration with the backend. Integrated push notifications using Firebase Cloud Messaging and incorporated Google AdMob for monetization. Added multilanguage support to facilitate localization for global users and improve app accessibility"
+    }
+]
