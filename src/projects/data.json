@@ -15,7 +15,7 @@
     },
     {
         "title":"Lazybug | A Social Media Web App",
-        "imgUrl":"https://firebasestorage.googleapis.com/v0/b/ykdromar-c4000.appspot.com/o/Screenshot%202024-09-14%20at%202.52.57%E2%80%AFPM.png?alt=media&token=ade33b3c-e98c-4c22-8700-e2177d1f8c7d",
+        "imgUrl":"https://firebasestorage.googleapis.com/v0/b/ykdromar-c4000.appspot.com/o/Screenshot%202024-09-15%20at%2012.11.24%E2%80%AFAM.png?alt=media&token=91fcd1a9-a3f2-47ae-8ee0-8a3d1dc02099",
         "description":"Developed a full-stack social media app with Node.js, Express.js, MongoDB, and React.js, incorporating real-time chat, profile picture processing, and secure deployment",
         "githubUrl":"https://github.com/ykdromar/lazybug",
         "url":"https://lazybug.ykdromar.com/"

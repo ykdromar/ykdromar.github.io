@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { addData } from "../config/firestore";
+import { setData } from "../config/firestore";
 import { toast } from "react-toastify";
 
 const Contact = () => {
@@ -18,13 +18,13 @@ const Contact = () => {
       <h1 className="text-3xl font-bold my-4">Get in touch</h1>
       <form
         onSubmit={handleSubmit((data) => {
-          addData("contact", data);
+          setData("contact", data, Date.now().toString());
           toast.success("Message sent");
           reset();
         })}
         className="flex flex-col items-center justify-center w-5/6"
       >
-        <label className="w-3/5 form-control my-0 px-2 ">
+        <label className="w-full lg:w-3/5 form-control my-0 px-2 ">
           <div className="label">
             <span className="label-text text-base">What is your name?</span>
           </div>
@@ -35,7 +35,7 @@ const Contact = () => {
             className="input input-bordered w-full min-w-48"
           />
         </label>
-        <label className="w-3/5 form-control my-0 px-2">
+        <label className="w-full lg:w-3/5 form-control my-0 px-2">
           <div className="label">
             <span className="label-text text-base">What is your email?</span>
           </div>
@@ -46,7 +46,7 @@ const Contact = () => {
             className="input input-bordered w-full min-w-48"
           />
         </label>
-        <label className="w-3/5 form-control my-0 px-2">
+        <label className="w-full lg:w-3/5 form-control my-0 px-2">
           <div className="label">
             <span className="label-text text-base">
               What is your mobile number?
@@ -59,7 +59,7 @@ const Contact = () => {
             className="input input-bordered w-full min-w-48"
           />
         </label>
-        <label className="form-control w-3/5 my-0 flex-1 px-2">
+        <label className="form-control w-full lg:w-3/5 my-0 flex-1 px-2">
           <div className="label">
             <span className="label-text text-base">What is your message?</span>
           </div>

@@ -146,7 +146,7 @@ const Header = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src={pic}
-            className="max-w-sm rounded-full shadow-2xl "
+            className="w-2/3 max-w-sm rounded-full shadow-2xl "
             alt="pic"
           />
           <div>
