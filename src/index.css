@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 section:nth-child(odd) {
-    background-color: oklch(var(--b2)); /* Light gray */
+    background-color: oklch(var(--b2));
   }
