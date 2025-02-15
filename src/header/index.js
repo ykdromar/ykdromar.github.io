@@ -1,7 +1,6 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
 import pic from "../assets/pic.jpg";
-import cv from "../assets/cv.pdf";
 const Header = () => {
   const scrollWithOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
@@ -162,9 +161,9 @@ const Header = () => {
               and enthusiastic individuals who are equally driven to explore and
               innovate
             </p>
-            <a href={cv} target="_blank" rel="noreferrer">
+            {/* <a href={cv} target="_blank" rel="noreferrer">
               <button className="btn btn-primary">Download CV</button>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
